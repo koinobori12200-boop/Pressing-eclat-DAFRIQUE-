@@ -1,0 +1,1351 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="Éclat D'Afrique Pressing - Pressing et blanchisserie à Bafoussam. Commandez vos services en ligne.">
+<title>Éclat D'Afrique Pressing</title><style>
+:root{--gold:#D9AD48;--gold2:#F5D98A;--dark:#101827;--black:#171717;--white:#fff;--cream:#FAF9F6;--gray:#777;--light:#F0EFEA;--green:#16834B;--red:#D94343;--radius:17px;--ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark);padding-bottom:85px;overflow-x:hidden}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;position:relative;overflow:hidden;transition:transform .25s var(--spring),background .3s,box-shadow .3s}
+button:active{transform:scale(.94)}
+img{max-width:100%}
+
+/* ===== SPLASH ===== */
+#splash{position:fixed;inset:0;z-index:999;background:radial-gradient(circle at 50% 40%,#263751,#101827 70%);display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s,transform .9s var(--ease)}
+#splash.out{opacity:0;visibility:hidden;transform:scale(1.15)}
+.splash-in{text-align:center;color:#fff}
+.splash-logo{width:92px;height:92px;margin:0 auto 22px;position:relative}
+.splash-logo svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.splash-logo circle{fill:none;stroke:var(--gold);stroke-width:2.5;stroke-dasharray:289;stroke-dashoffset:289;animation:draw 1.3s var(--ease) .1s forwards}
+.splash-logo b{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;color:var(--gold);opacity:0;transform:scale(.4) rotate(-20deg);animation:pop .8s var(--spring) .8s forwards}
+.splash-in h1{font-size:17px;letter-spacing:6px;overflow:hidden;white-space:nowrap}
+.splash-in h1 span{display:inline-block;transform:translateY(120%);animation:rise .7s var(--ease) forwards}
+.splash-in small{display:block;margin-top:10px;color:var(--gold2);font-size:10px;letter-spacing:4px;opacity:0;animation:fade .8s ease 1.4s forwards}
+.splash-bar{width:120px;height:2px;background:#ffffff1f;margin:26px auto 0;border-radius:2px;overflow:hidden}
+.splash-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));animation:load 1.8s var(--ease) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{opacity:1;transform:none}}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+@keyframes load{to{width:100%}}
+
+/* ===== HEADER ===== */
+header{background:var(--dark);color:white;padding:17px 18px;position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 15px #0002;animation:dropIn .8s var(--ease) 1.9s backwards}
+@keyframes dropIn{from{transform:translateY(-100%)}}
+#progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));box-shadow:0 0 10px var(--gold);transition:width .1s linear}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:43px;height:43px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:21px;font-weight:bold;position:relative}
+.logo:after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--gold);opacity:0;animation:pulseRing 3s ease-out infinite}
+@keyframes pulseRing{0%{transform:scale(.8);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+.brand h1{font-size:14px;letter-spacing:1px}
+.brand small{color:var(--gold2);font-size:10px}
+.header-actions{display:flex;gap:10px}
+.icon-btn{background:#ffffff14;border:1px solid #ffffff25;color:white;border-radius:12px;padding:10px;font-size:18px}
+.icon-btn.bump,.nav-item.bump strong{animation:bump .5s var(--spring)}
+@keyframes bump{30%{transform:scale(1.35) rotate(-8deg)}100%{transform:none}}
+
+.container{max-width:1000px;margin:auto;padding:17px}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(130deg,#101827,#263751,#1b2a44,#101827);background-size:300% 300%;animation:gradMove 12s ease infinite;border-radius:24px;padding:28px 23px;color:white;position:relative;overflow:hidden;margin-bottom:25px;box-shadow:0 20px 40px -20px #101827aa}
+@keyframes gradMove{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.hero:after{content:"✦";position:absolute;font-size:170px;right:-5px;top:-35px;color:#d9ad481b;animation:spinSlow 40s linear infinite}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.hero:before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,#ffffff14,transparent);transform:skewX(-20deg);animation:sweep 6s ease-in-out 2.5s infinite}
+@keyframes sweep{0%{left:-60%}40%,100%{left:140%}}
+.spark{position:absolute;bottom:-10px;width:var(--s);height:var(--s);background:var(--gold2);border-radius:50%;opacity:0;filter:blur(.5px);animation:floatUp var(--d) linear var(--dl) infinite;z-index:0}
+@keyframes floatUp{0%{transform:translate(0,0) scale(.5);opacity:0}15%{opacity:.8}100%{transform:translate(var(--x),-320px) scale(1.2);opacity:0}}
+.hero>*:not(.spark){position:relative;z-index:1}
+.hero .tag{color:var(--gold2);font-size:11px;letter-spacing:2px;font-weight:bold}
+.hero h2{font-size:30px;line-height:1.15;margin:14px 0;max-width:360px}
+.hero h2 .w{display:inline-block;opacity:0;transform:translateY(25px) rotateX(-60deg);animation:wordIn .8s var(--ease) forwards}
+.hero h2 .w.gold{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wordIn .8s var(--ease) forwards,shine 3s linear infinite}
+@keyframes wordIn{to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:200% 0}}
+.hero p{font-size:13px;color:#d4d9e0;line-height:1.6;max-width:340px}
+.primary-btn{background:var(--gold);color:#171717;border:none;padding:14px 19px;border-radius:11px;font-weight:bold;margin-top:19px;animation:glow 2.6s ease-in-out infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 #d9ad4855}50%{box-shadow:0 0 0 12px #d9ad4800}}
+.primary-btn:hover{background:var(--gold2)}
+
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:25px 0 14px}
+.section-title h2{font-size:19px;position:relative;padding-bottom:6px}
+.section-title h2:after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;border-radius:3px;background:var(--gold);transition:width .8s var(--ease) .2s}
+.section-title.in h2:after{width:38px}
+.section-title small{color:var(--gray)}
+
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0 27px}
+.trust{background:white;padding:13px 7px;border-radius:13px;text-align:center;border:1px solid var(--light);transition:transform .4s var(--spring),box-shadow .3s}
+.trust:hover{transform:translateY(-5px);box-shadow:0 12px 20px -10px #0003}
+.trust strong{display:block;font-size:21px;margin-bottom:6px;animation:floaty 3.5s ease-in-out infinite}
+.trust:nth-child(2) strong{animation-delay:.5s}.trust:nth-child(3) strong{animation-delay:1s}
+@keyframes floaty{50%{transform:translateY(-5px)}}
+.trust span{font-size:10px;color:var(--gray)}
+
+.category-list{display:flex;gap:9px;overflow-x:auto;padding:3px 0 13px;scrollbar-width:none}
+.category{white-space:nowrap;border:1px solid #ddd;background:white;border-radius:30px;padding:10px 16px;font-size:12px;transition:all .35s var(--ease)}
+.category.active{background:var(--dark);color:white;border-color:var(--dark);transform:scale(1.06);box-shadow:0 6px 14px -6px #101827aa}
+
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;perspective:900px}
+.product{background:white;border-radius:var(--radius);overflow:hidden;border:1px solid #eceae5;transition:transform .45s var(--ease),box-shadow .45s var(--ease);position:relative}
+.product:hover{transform:translateY(-6px);box-shadow:0 18px 30px -14px #10182766}
+.product:before{content:"";position:absolute;inset:0;border-radius:var(--radius);padding:1.5px;background:linear-gradient(135deg,var(--gold),transparent 50%,var(--gold2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s;pointer-events:none}
+.product:hover:before{opacity:1}
+.product-visual{height:115px;background:linear-gradient(135deg,#e8e4d9,#f8f6f0);display:grid;place-items:center;font-size:52px;transition:transform .5s var(--spring)}
+.product:hover .product-visual{transform:scale(1.12) rotate(-4deg)}
+.product-content{padding:13px}
+.product h3{font-size:14px;margin-bottom:6px}
+.product p{font-size:11px;color:var(--gray);line-height:1.5;min-height:32px}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:5px;margin-top:12px}
+.price{font-weight:bold;color:#9B7425;font-size:15px}
+.add-btn{border:none;background:var(--dark);color:white;padding:9px 12px;border-radius:9px;font-size:12px}
+.add-btn:hover{background:#263751}
+
+.promo{background:#f1ead9;border-radius:17px;padding:18px;margin:25px 0;position:relative;overflow:hidden}
+.promo:after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(#d9ad4844,transparent 70%);animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.4)}}
+.promo h3{font-size:16px;margin-bottom:7px}
+.promo p{font-size:12px;color:#5d574b;line-height:1.6}
+.service-box{background:white;padding:18px;border-radius:17px;margin-top:17px;border:1px solid var(--light)}
+.service-box h3{margin-bottom:8px}
+.service-box p{font-size:13px;color:var(--gray);line-height:1.7}
+
+/* ===== NAV ===== */
+.bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#ffffffee;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid #e9e6df;display:flex;justify-content:space-around;padding:9px 3px calc(9px + env(safe-area-inset-bottom));z-index:30;animation:riseNav .8s var(--ease) 2s backwards}
+@keyframes riseNav{from{transform:translateY(100%)}}
+.nav-ind{position:absolute;top:0;height:3px;border-radius:0 0 4px 4px;background:var(--gold);box-shadow:0 2px 12px var(--gold);transition:left .5s var(--spring),width .5s var(--spring)}
+.nav-item{background:none;border:0;color:#858585;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:55px;transition:color .3s}
+.nav-item strong{font-size:20px;transition:transform .45s var(--spring)}
+.nav-item.active{color:#9B7425}
+.nav-item.active strong{transform:translateY(-3px) scale(1.18)}
+.badge{background:#d9ad48;color:#171717;border-radius:20px;font-size:10px;padding:2px 6px}
+
+/* ===== PAGES ===== */
+.page{display:none}
+.page.active{display:block;animation:pageIn .6s var(--ease)}
+@keyframes pageIn{from{opacity:0;transform:translateY(22px) scale(.985);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+
+.card{background:white;border:1px solid #eceae5;border-radius:17px;padding:17px;margin-bottom:14px}
+.card h3{margin-bottom:13px}
+.form-group{margin-bottom:13px}
+.form-group label{display:block;font-size:12px;font-weight:bold;margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;background:white;outline:none;font-size:13px;transition:border-color .3s,box-shadow .3s,transform .3s var(--ease)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold);box-shadow:0 0 0 4px #d9ad4826;transform:translateY(-1px)}
+textarea{resize:vertical;min-height:75px}
+.full-btn{width:100%;padding:14px;border:0;border-radius:11px;background:var(--dark);color:white;font-weight:bold;margin-top:10px}
+.full-btn:hover{box-shadow:0 10px 20px -10px #101827cc}
+.gold-btn{background:var(--gold);color:#171717}
+.gold-btn:before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,#fff8,transparent);transform:skewX(-20deg);animation:sweep 4s ease-in-out infinite}
+.secondary-btn{background:#eee;color:#222;border:0;border-radius:10px;padding:11px}
+
+.cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #eee;animation:slideIn .5s var(--ease) backwards}
+@keyframes slideIn{from{opacity:0;transform:translateX(-24px)}}
+.cart-item h4{font-size:13px}
+.cart-item small{color:var(--gray)}
+.quantity{display:flex;align-items:center;gap:9px}
+.quantity button{border:0;background:#eee;width:27px;height:27px;border-radius:8px}
+.quantity strong{display:inline-block;min-width:14px;text-align:center}
+.total-line{display:flex;justify-content:space-between;padding:8px 0;font-size:13px}
+.total-line.final{border-top:1px solid #ddd;font-size:18px;font-weight:bold;padding-top:15px}
+.empty{text-align:center;padding:40px 15px;color:var(--gray)}
+.empty strong{display:block;font-size:40px;margin-bottom:10px;animation:floaty 3s ease-in-out infinite}
+.status{display:inline-block;padding:6px 10px;border-radius:20px;font-size:10px;background:#f2ead8;color:#87631c;font-weight:bold}
+
+.timeline{border-left:2px solid #e5d8b8;margin:20px 0 10px 7px;padding-left:20px}
+.timeline-step{position:relative;margin-bottom:21px;font-size:13px;animation:slideIn .6s var(--ease) backwards;animation-delay:calc(var(--i)*70ms)}
+.timeline-step:before{content:"";position:absolute;left:-27px;top:0;width:11px;height:11px;border-radius:50%;background:#ddd;transition:background .4s}
+.timeline-step.done:before{background:var(--green)}
+.timeline-step.current:before{background:var(--gold);animation:dotPulse 1.8s ease-out infinite}
+@keyframes dotPulse{0%{box-shadow:0 0 0 0 #d9ad48aa}100%{box-shadow:0 0 0 12px #d9ad4800}}
+.timeline-step small{display:block;color:var(--gray);margin-top:4px}
+
+.admin-header{background:#101827;color:white;padding:20px;border-radius:16px;margin-bottom:17px}
+.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{background:white;border-radius:13px;padding:15px;border:1px solid #eee;transition:transform .4s var(--spring)}
+.stat:hover{transform:translateY(-4px)}
+.stat small{color:var(--gray)}
+.stat h2{margin-top:9px;font-size:22px}
+.admin-row{background:white;border:1px solid #eee;padding:13px;border-radius:12px;margin-bottom:10px}
+.admin-row h4{font-size:13px;margin-bottom:5px}
+.admin-row p{font-size:11px;color:var(--gray);line-height:1.7}
+.admin-row select{padding:9px;border-radius:8px;border:1px solid #ddd;margin-top:9px;width:100%}
+.danger-btn{background:#ffe7e7;color:#b22;border:0;padding:9px;border-radius:8px;margin-top:8px}
+.edit-btn{background:#eee;border:0;padding:9px;border-radius:8px;margin-top:8px}
+.notice{padding:12px;background:#f5efdf;border-radius:10px;font-size:11px;line-height:1.6;margin:12px 0}
+.hidden{display:none!important}
+footer{text-align:center;padding:28px 10px;font-size:11px;color:#888}
+
+/* ===== MOTION UTILITIES ===== */
+.reveal{opacity:0;transform:translateY(34px) scale(.97);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
+.reveal.in{opacity:1;transform:none}
+.ripple{position:absolute;border-radius:50%;background:#ffffff66;transform:scale(0);animation:rip .7s ease-out forwards;pointer-events:none}
+@keyframes rip{to{transform:scale(3.2);opacity:0}}
+#toast{position:fixed;left:50%;bottom:100px;transform:translate(-50%,40px) scale(.9);background:var(--dark);color:#fff;padding:12px 18px;border-radius:30px;font-size:12px;z-index:200;opacity:0;pointer-events:none;box-shadow:0 12px 30px -8px #000a;border:1px solid #d9ad4855;transition:all .5s var(--spring);max-width:88%;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0) scale(1)}
+.fly{position:fixed;z-index:300;font-size:26px;pointer-events:none;transition:transform .8s cubic-bezier(.5,-.2,.7,.4),opacity .8s;will-change:transform}
+.confetti{position:fixed;z-index:400;width:8px;height:12px;pointer-events:none;animation:conf 1.6s cubic-bezier(.2,.7,.4,1) forwards}
+@keyframes conf{to{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}
+
+@media(min-width:650px){.products{grid-template-columns:repeat(3,1fr)}.hero h2{font-size:39px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}#splash{display:none}}
+</style></head><body>
+
+<div id="splash"><div class="splash-in">
+<div class="splash-logo"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg><b>É</b></div>
+<h1 id="splashTitle"></h1>
+<small>PRESSING &amp; BLANCHISSERIE</small>
+<div class="splash-bar"><i></i></div>
+</div></div>
+
+<header>
+<div class="brand">
+<div class="logo">É</div>
+<div>
+<h1>ÉCLAT D'AFRIQUE</h1>
+<small>PRESSING & BLANCHISSERIE</small>
+</div>
+</div><div class="header-actions">
+<button class="icon-btn" id="cartBtn" onclick="openPage('cart')">🛒 <span id="headerCount">0</span></button>
+<button class="icon-btn" onclick="openPage('profile')">♙</button>
+</div>
+<div id="progress"></div>
+</header><main class="container"><!-- ACCUEIL --><section class="page active" id="home"><div class="hero" id="hero">
+<div class="tag">L'EXCELLENCE DU SOIN TEXTILE</div>
+<h2 id="heroTitle">Vos vêtements méritent le meilleur.</h2>
+<p>Pressing, blanchisserie et entretien de votre maison à Bafoussam. Un service soigné, des tarifs transparents.</p>
+<button class="primary-btn" onclick="openPage('shop')">DÉCOUVRIR NOS SERVICES →</button>
+</div><div class="trust-grid">
+<div class="trust reveal"><strong>✨</strong><span>Soin du linge</span></div>
+<div class="trust reveal" style="--i:1"><strong>♧</strong><span>Prix transparents</span></div>
+<div class="trust reveal" style="--i:2"><strong>✓</strong><span>Suivi commande</span></div>
+</div><div class="section-title reveal">
+<h2>Nos services populaires</h2>
+<small>Nos tarifs</small>
+</div><div id="homeProducts" class="products"></div><div class="promo reveal">
+<h3>Votre linge, notre priorité.</h3>
+<p>Confiez-nous vos vêtements, vos draps et vos articles de maison. Nous prenons soin de chaque pièce.</p>
+</div><div class="service-box reveal">
+<h3>🏠 Nettoyage à domicile</h3>
+<p>Nettoyage de canapés, tapis et matelas. Contactez-nous pour organiser votre intervention.</p>
+<button class="full-btn" onclick="openPage('shop')">Voir les services</button>
+</div><div class="service-box reveal">
+<h3>📍 Retrouvez-nous</h3>
+<p>Éclat D'Afrique Pressing<br>Près du Stade Municipal, Bafoussam.</p>
+<button class="full-btn" onclick="callBusiness()">Nous appeler</button>
+</div></section><!-- BOUTIQUE --><section class="page" id="shop"><div class="section-title">
+<h2>Notre boutique</h2>
+<small>Nos prestations</small>
+</div><div class="form-group">
+<input id="search" placeholder="Rechercher un service..." oninput="renderProducts()">
+</div><div class="category-list" id="categories"></div><div class="products" id="shopProducts"></div></section><!-- PANIER --><section class="page" id="cart"><div class="section-title">
+<h2>Mon panier</h2>
+<small id="cartCount">0 article</small>
+</div><div class="card">
+<div id="cartItems"></div><div id="cartTotals"></div><div class="form-group" style="margin-top:15px">
+<label>Mon budget maximum (FCFA)</label>
+<input type="number" id="budget" placeholder="Ex : 3000" min="0" oninput="checkBudget()">
+<small id="budgetMessage"></small>
+</div><button class="full-btn gold-btn" onclick="openPage('checkout')">CONTINUER MA COMMANDE →</button>
+<button class="full-btn" onclick="openPage('shop')">Continuer mes achats</button>
+
+</div></section><!-- COMMANDE --><section class="page" id="checkout"><div class="section-title">
+<h2>Finaliser ma commande</h2>
+</div><form id="orderForm" class="card"><div class="form-group">
+<label>Nom complet *</label>
+<input required id="customerName" placeholder="Votre nom">
+</div><div class="form-group">
+<label>Téléphone *</label>
+<input required id="customerPhone" type="tel" placeholder="6XXXXXXXX">
+</div><div class="form-group">
+<label>Quartier *</label>
+<input required id="customerArea" placeholder="Ex : Tyo, Djeleng, Évêché...">
+</div><div class="form-group">
+<label>Mode de réception *</label>
+<select id="deliveryMode" onchange="deliveryChange()">
+<option value="Dépôt au pressing">Je dépose au pressing</option>
+<option value="Récupération à domicile">Récupération à domicile</option>
+<option value="Livraison à domicile">Livraison à domicile</option>
+</select>
+</div><div class="form-group hidden" id="addressGroup">
+<label>Adresse précise</label>
+<textarea id="customerAddress" placeholder="Indiquez votre adresse et un repère"></textarea>
+</div><div class="form-group">
+<label>Date souhaitée</label>
+<input type="date" id="desiredDate">
+</div><div class="form-group">
+<label>Mode de paiement</label>
+<select id="paymentMode">
+<option>Paiement sur place</option>
+<option>Paiement à la livraison</option>
+<option>Confirmation de paiement par WhatsApp</option>
+</select>
+</div><div class="form-group">
+<label>Instructions particulières</label>
+<textarea id="instructions" placeholder="Ex : tache d'huile sur le jean, tissu fragile, repassage spécial..."></textarea>
+</div><div class="form-group">
+<label>Photo d'une tache ou d'un vêtement (facultatif)</label>
+<input type="file" id="orderPhoto" accept="image/*">
+<small>La photo reste sur cet appareil. Elle ne sera pas jointe automatiquement au message WhatsApp.</small>
+</div><div class="notice">
+Votre commande sera transmise à notre équipe par WhatsApp. Le montant et les éventuels frais de déplacement seront confirmés avant intervention.
+</div><div id="checkoutSummary"></div><button class="full-btn gold-btn" type="submit">CONFIRMER MA COMMANDE</button>
+
+</form></section><!-- SUIVI --><section class="page" id="tracking"><div class="section-title">
+<h2>Suivre ma commande</h2>
+</div><div class="card">
+<div class="form-group">
+<label>Numéro de commande</label>
+<input id="trackNumber" placeholder="Ex : ECL-123456">
+</div>
+<button class="full-btn" onclick="trackOrder()">RECHERCHER</button>
+</div><div id="trackingResult"></div><div class="card">
+<h3>Les étapes de votre linge</h3>
+<div class="timeline" id="generalTimeline"></div>
+</div></section><!-- PROFIL --><section class="page" id="profile"><div class="section-title">
+<h2>Mon espace client</h2>
+</div><div class="card">
+<h3>Mes informations</h3><div class="form-group">
+<label>Mon nom</label>
+<input id="profileName" placeholder="Votre nom">
+</div><div class="form-group">
+<label>Mon téléphone</label>
+<input id="profilePhone" placeholder="Votre téléphone">
+</div><button class="full-btn" onclick="saveProfile()">Enregistrer mes informations</button>
+
+</div><div class="card">
+<h3>Mon historique</h3>
+<div id="history"></div>
+</div><div class="card">
+<h3>Besoin d'aide ?</h3>
+<button class="full-btn" onclick="contactWhatsApp()">Contacter WhatsApp</button>
+<button class="full-btn" onclick="callBusiness()">Appeler le pressing</button>
+</div><div class="card">
+<h3>Administration</h3>
+<p style="font-size:12px;color:#777">Espace réservé au responsable.</p>
+<button class="full-btn" onclick="adminLogin()">Accéder à l'administration</button>
+</div></section><!-- ADMIN --><section class="page" id="admin"><div class="admin-header">
+<small style="color:#e9c96c">ÉCLAT D'AFRIQUE</small>
+<h2 style="margin:10px 0">Administration</h2>
+<p style="font-size:12px;color:#ccc">Gestion de votre boutique</p>
+<button class="secondary-btn" style="margin-top:12px" onclick="openPage('home')">Quitter l'administration</button>
+</div><div class="admin-grid">
+<div class="stat"><small>Commandes</small><h2 id="statOrders">0</h2></div>
+<div class="stat"><small>Chiffre d'affaires enregistré</small><h2 id="statRevenue">0 F</h2></div>
+<div class="stat"><small>En attente</small><h2 id="statPending">0</h2></div>
+<div class="stat"><small>Clients enregistrés</small><h2 id="statCustomers">0</h2></div>
+</div><div class="section-title"><h2>Commandes clients</h2></div>
+<div id="adminOrders"></div><div class="section-title"><h2>Gestion des produits</h2></div><div class="card">
+<h3>Ajouter ou modifier un produit</h3>
+<input type="hidden" id="editProductId"><div class="form-group">
+<label>Nom du service</label>
+<input id="productName" placeholder="Nom du produit">
+</div><div class="form-group">
+<label>Catégorie</label>
+<select id="productCategory">
+<option>Vêtements</option>
+<option>Maison</option>
+<option>Literie</option>
+<option>Mobilier</option>
+<option>Produits</option>
+</select>
+</div><div class="form-group">
+<label>Prix (FCFA)</label>
+<input type="number" id="productPrice" min="0">
+</div><div class="form-group">
+<label>Unité</label>
+<input id="productUnit" placeholder="Ex : par pièce, par paire, par place">
+</div><div class="form-group">
+<label>Symbole visuel</label>
+<input id="productEmoji" placeholder="Ex : 👕">
+</div><div class="form-group">
+<label>Description</label>
+<textarea id="productDescription"></textarea>
+</div><button class="full-btn gold-btn" onclick="saveProduct()">ENREGISTRER LE PRODUIT</button>
+<button class="full-btn" onclick="resetProductForm()">Nouveau produit</button>
+
+</div><div id="adminProducts"></div><div class="card">
+<h3>Paramètres</h3><div class="form-group">
+<label>Frais de livraison (FCFA)</label>
+<input type="number" id="deliveryFee" min="0">
+</div><button class="full-btn" onclick="saveSettings()">Enregistrer les paramètres</button>
+
+<button class="full-btn" onclick="exportData()">Exporter les données JSON</button>
+
+<button class="full-btn" onclick="changePin()">Changer le code administrateur</button>
+
+<div class="notice">
+Les données sont stockées localement sur ce téléphone. Faites régulièrement une sauvegarde. Cet espace n'est pas protégé par un serveur.
+</div>
+</div></section></main><footer>
+<strong>ÉCLAT D'AFRIQUE PRESSING</strong><br>
+Le soin du linge, notre engagement.<br>
+Bafoussam — Cameroun
+</footer><nav class="bottom-nav"><span class="nav-ind" id="navInd"></span><button class="nav-item active" data-page="home" onclick="openPage('home')">
+<strong>⌂</strong>Accueil
+</button><button class="nav-item" data-page="shop" onclick="openPage('shop')">
+<strong>▦</strong>Boutique
+</button><button class="nav-item" data-page="cart" onclick="openPage('cart')">
+<strong>🛒</strong>Panier
+</button><button class="nav-item" data-page="tracking" onclick="openPage('tracking')">
+<strong>◷</strong>Suivi
+</button><button class="nav-item" data-page="profile" onclick="openPage('profile')">
+<strong>♙</strong>Profil
+</button></nav><div id="toast"></div><script>
+
+/* =================================
+   CONFIGURATION
+================================= */
+
+const BUSINESS_PHONE="237683674166";
+const BUSINESS_DISPLAY="683 674 166";
+
+const DEFAULT_PRODUCTS=[
+{id:1,name:"Vêtement",category:"Vêtements",price:500,unit:"par pièce",emoji:"👕",description:"Lavage et entretien de vos vêtements."},
+{id:2,name:"Robe",category:"Vêtements",price:700,unit:"par pièce",emoji:"👗",description:"Entretien de vos robes."},
+{id:3,name:"Drap",category:"Literie",price:700,unit:"par pièce",emoji:"🛏️",description:"Nettoyage de vos draps."},
+{id:4,name:"Couverture",category:"Literie",price:3500,unit:"par pièce",emoji:"🧣",description:"Entretien de vos couvertures."},
+{id:5,name:"Tapis",category:"Maison",price:3500,unit:"par pièce",emoji:"🏠",description:"Nettoyage de tapis."},
+{id:6,name:"Rideaux",category:"Maison",price:500,unit:"par paire",emoji:"🪟",description:"Nettoyage de rideaux, tarif par paire."},
+{id:7,name:"Costume",category:"Vêtements",price:1500,unit:"par ensemble",emoji:"🤵",description:"Nettoyage et entretien de costume."},
+{id:8,name:"Canapé",category:"Mobilier",price:7000,unit:"par place",emoji:"🛋️",description:"Nettoyage de canapé à domicile, prix par place."}
+];
+
+const STATUS=[
+"Commande reçue",
+"Vêtements déposés",
+"Comptage confirmé",
+"Lavage en cours",
+"Séchage",
+"Repassage",
+"Contrôle qualité",
+"Prêt à récupérer",
+"Livré / récupéré"
+];
+
+let products=load("eclat_products",DEFAULT_PRODUCTS);
+let cart=load("eclat_cart",[]);
+let orders=load("eclat_orders",[]);
+let settings=load("eclat_settings",{deliveryFee:1000});
+let profile=load("eclat_profile",{name:"",phone:""});
+let adminPin=load("eclat_pin","2468");
+let activeCategory="Tous";
+
+/* =================================
+   UTILITAIRES
+================================= */
+
+function load(key,fallback){
+try{
+const value=localStorage.getItem(key);
+return value?JSON.parse(value):fallback;
+}catch(e){return fallback}
+}
+
+function save(key,value){
+try{localStorage.setItem(key,JSON.stringify(value))}catch(e){}
+}
+
+function money(value){
+return Number(value||0).toLocaleString("fr-FR")+" FCFA";
+}
+
+function escapeHTML(value){
+return String(value??"").replace(/[&<>"']/g,c=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#039;"
+})[c]);
+}
+
+function openPage(id){
+
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+
+document.getElementById(id).classList.add("active");
+
+document.querySelectorAll(".nav-item").forEach(n=>{
+n.classList.toggle("active",n.dataset.page===id);
+});
+
+if(id==="cart")renderCart();
+if(id==="shop")renderProducts();
+if(id==="profile")renderProfile();
+if(id==="admin")renderAdmin();
+if(id==="checkout")renderCheckout();
+
+window.scrollTo({top:0,behavior:"smooth"});
+moveIndicator();
+setTimeout(initReveal,60);
+}
+
+/* =================================
+   MOTION DESIGN
+================================= */
+
+const REDUCED=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* Splash */
+(function(){
+const t=document.getElementById("splashTitle");
+"ÉCLAT D'AFRIQUE".split("").forEach((c,i)=>{
+const s=document.createElement("span");
+s.textContent=c===" "?"\u00A0":c;
+s.style.animationDelay=(.9+i*.045)+"s";
+t.appendChild(s);
+});
+setTimeout(()=>document.getElementById("splash").classList.add("out"),2300);
+setTimeout(()=>document.getElementById("splash")?.remove(),3200);
+})();
+
+/* Hero : mots animés + étincelles */
+(function(){
+const h=document.getElementById("heroTitle");
+const words=h.textContent.split(" ");
+h.innerHTML=words.map((w,i)=>`<span class="w ${i>=3?"gold":""}" style="animation-delay:${2.3+i*.12}s">${w}</span>`).join(" ");
+const hero=document.getElementById("hero");
+for(let i=0;i<16;i++){
+const s=document.createElement("span");
+s.className="spark";
+s.style.cssText=`left:${Math.random()*100}%;--s:${2+Math.random()*4}px;--d:${5+Math.random()*6}s;--dl:${Math.random()*6}s;--x:${(Math.random()-.5)*80}px`;
+hero.appendChild(s);
+}
+})();
+
+/* Révélation au scroll */
+const io=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}
+});
+},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+
+function initReveal(){
+document.querySelectorAll(".page.active .section-title:not(.reveal-ready)").forEach(el=>{
+el.classList.add("reveal-ready","reveal");
+});
+document.querySelectorAll(".page.active .product:not(.reveal),.page.active .card:not(.reveal),.page.active .admin-row:not(.reveal),.page.active .stat:not(.reveal)").forEach((el,i)=>{
+el.classList.add("reveal");
+el.style.setProperty("--i",i%6);
+});
+document.querySelectorAll(".page.active .reveal:not(.in)").forEach(el=>io.observe(el));
+}
+
+/* Barre de progression de lecture */
+addEventListener("scroll",()=>{
+const h=document.documentElement;
+const p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+document.getElementById("progress").style.width=(p*100)+"%";
+},{passive:true});
+
+/* Indicateur glissant de la navigation */
+function moveIndicator(){
+const a=document.querySelector(".nav-item.active");
+const ind=document.getElementById("navInd");
+if(!a||!ind)return;
+ind.style.left=(a.offsetLeft+a.offsetWidth*.2)+"px";
+ind.style.width=(a.offsetWidth*.6)+"px";
+}
+addEventListener("resize",moveIndicator);
+
+/* Ripple sur tous les boutons */
+document.addEventListener("pointerdown",e=>{
+const b=e.target.closest("button");
+if(!b||REDUCED)return;
+const r=b.getBoundingClientRect(),d=Math.max(r.width,r.height);
+const s=document.createElement("span");
+s.className="ripple";
+s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;
+b.appendChild(s);
+setTimeout(()=>s.remove(),700);
+});
+
+/* Toast */
+let toastTimer;
+function toast(msg){
+const t=document.getElementById("toast");
+t.textContent=msg;
+t.classList.add("show");
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>t.classList.remove("show"),2200);
+}
+
+/* Compteur animé */
+function countUp(el,to,format){
+if(REDUCED){el.textContent=format(to);return}
+const t0=performance.now(),dur=1100;
+function step(t){
+const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,4);
+el.textContent=format(Math.round(to*e));
+if(p<1)requestAnimationFrame(step);
+}
+requestAnimationFrame(step);
+}
+
+/* Vol de l'article vers le panier */
+function flyToCart(btn,emoji){
+const target=document.getElementById("cartBtn");
+if(!btn||REDUCED){bumpCart();return}
+const a=btn.getBoundingClientRect(),b=target.getBoundingClientRect();
+const f=document.createElement("div");
+f.className="fly";
+f.textContent=emoji||"🧺";
+f.style.left=a.left+a.width/2-13+"px";
+f.style.top=a.top+"px";
+document.body.appendChild(f);
+requestAnimationFrame(()=>{
+f.style.transform=`translate(${b.left+b.width/2-a.left-a.width/2}px,${b.top-a.top}px) scale(.3) rotate(360deg)`;
+f.style.opacity=".4";
+});
+setTimeout(()=>{f.remove();bumpCart()},800);
+}
+
+function bumpCart(){
+const c=document.getElementById("cartBtn");
+c.classList.remove("bump");void c.offsetWidth;c.classList.add("bump");
+const n=document.querySelector('.nav-item[data-page="cart"]');
+n.classList.remove("bump");void n.offsetWidth;n.classList.add("bump");
+}
+
+/* Confettis de célébration */
+function confetti(){
+if(REDUCED)return;
+const colors=["#D9AD48","#F5D98A","#16834B","#fff","#263751"];
+for(let i=0;i<60;i++){
+const c=document.createElement("div");
+c.className="confetti";
+c.style.left="50%";c.style.top="55%";
+c.style.background=colors[i%colors.length];
+c.style.setProperty("--x",(Math.random()-.5)*420+"px");
+c.style.setProperty("--y",(Math.random()*-380-40)+"px");
+c.style.setProperty("--r",Math.random()*720+"deg");
+c.style.animationDelay=Math.random()*.2+"s";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),2000);
+}
+}
+
+/* =================================
+   PRODUITS
+================================= */
+
+function productCard(p){
+
+return `
+<div class="product">
+
+<div class="product-visual">${escapeHTML(p.emoji||"🧺")}</div>
+
+<div class="product-content">
+
+<h3>${escapeHTML(p.name)}</h3>
+
+<p>${escapeHTML(p.description||"Service de pressing.")}</p>
+
+<div class="product-bottom">
+
+<div>
+<div class="price">${money(p.price)}</div>
+<small style="color:#888">${escapeHTML(p.unit)}</small>
+</div>
+
+<button class="add-btn" onclick="addToCart(${Number(p.id)},this)">+ Ajouter</button>
+
+</div>
+</div>
+</div>
+`;
+}
+
+function renderProducts(){
+
+let filtered=products.filter(p=>{
+
+let category=activeCategory==="Tous"||p.category===activeCategory;
+
+let q=(document.getElementById("search")?.value||"").toLowerCase();
+
+return category&&p.name.toLowerCase().includes(q);
+
+});
+
+let cats=["Tous",...new Set(products.map(p=>p.category))];
+
+document.getElementById("categories").innerHTML=cats.map(c=>`
+<button class="category ${activeCategory===c?"active":""}" onclick="setCategory('${escapeHTML(c)}')">${escapeHTML(c)}</button>
+`).join("");
+
+document.getElementById("shopProducts").innerHTML=
+filtered.map(productCard).join("")||'<div class="empty">Aucun service trouvé.</div>';
+
+initReveal();
+
+}
+
+function setCategory(c){
+activeCategory=c;
+renderProducts();
+}
+
+function renderHome(){
+
+document.getElementById("homeProducts").innerHTML=
+products.slice(0,4).map(productCard).join("");
+
+initReveal();
+
+}
+
+/* =================================
+   PANIER
+================================= */
+
+function addToCart(id,btn){
+
+let p=products.find(x=>x.id===id);
+if(!p)return;
+
+let item=cart.find(x=>x.id===id);
+
+if(item)item.qty++;
+else cart.push({...p,qty:1});
+
+save("eclat_cart",cart);
+updateHeader();
+
+flyToCart(btn,p.emoji);
+toast("✓ "+p.name+" ajouté au panier");
+
+}
+
+function updateQty(id,delta){
+
+let item=cart.find(x=>x.id===id);
+if(!item)return;
+
+item.qty+=delta;
+
+if(item.qty<=0){
+cart=cart.filter(x=>x.id!==id);
+}
+
+save("eclat_cart",cart);
+renderCart();
+updateHeader();
+
+}
+
+function subtotal(){
+return cart.reduce((sum,p)=>sum+p.price*p.qty,0);
+}
+
+function renderCart(){
+
+let container=document.getElementById("cartItems");
+
+document.getElementById("cartCount").textContent=
+cart.reduce((s,p)=>s+p.qty,0)+" article(s)";
+
+if(!cart.length){
+
+container.innerHTML='<div class="empty"><strong>🛒</strong>Votre panier est vide.<br>Découvrez nos services.</div>';
+
+document.getElementById("cartTotals").innerHTML="";
+return;
+}
+
+container.innerHTML=cart.map((p,i)=>`
+<div class="cart-item" style="animation-delay:${i*70}ms">
+
+<div>
+<h4>${escapeHTML(p.name)}</h4>
+<small>${money(p.price)} × ${p.qty}</small>
+</div>
+
+<div class="quantity">
+<button onclick="updateQty(${p.id},-1)">−</button>
+<strong>${p.qty}</strong>
+<button onclick="updateQty(${p.id},1)">+</button>
+</div>
+
+<strong>${money(p.price*p.qty)}</strong>
+
+</div>
+`).join("");
+
+document.getElementById("cartTotals").innerHTML=`
+<div class="total-line"><span>Sous-total</span><strong id="subTotalVal">${money(subtotal())}</strong></div>
+<div class="total-line"><span>Livraison</span><span>Selon le mode choisi</span></div>
+<div class="total-line final"><span>Total provisoire</span><span id="totalVal">${money(subtotal())}</span></div>
+`;
+
+countUp(document.getElementById("totalVal"),subtotal(),money);
+
+checkBudget();
+
+}
+
+function updateHeader(){
+
+let count=cart.reduce((s,p)=>s+p.qty,0);
+
+document.getElementById("headerCount").textContent=count;
+
+save("eclat_cart",cart);
+
+}
+
+function checkBudget(){
+
+let input=document.getElementById("budget");
+let message=document.getElementById("budgetMessage");
+
+if(!input||!message)return;
+
+let budget=Number(input.value);
+
+if(!budget){
+message.textContent="";
+return;
+}
+
+let difference=budget-subtotal();
+
+message.style.color=difference>=0?"green":"red";
+
+message.textContent=difference>=0?
+"✓ Votre commande respecte votre budget. Reste : "+money(difference):
+"⚠ Votre commande dépasse votre budget de "+money(Math.abs(difference));
+
+}
+
+/* =================================
+   COMMANDE
+================================= */
+
+function deliveryChange(){
+
+let mode=document.getElementById("deliveryMode").value;
+
+document.getElementById("addressGroup").classList.toggle(
+"hidden",mode==="Dépôt au pressing"
+);
+
+}
+
+function renderCheckout(){
+
+if(!cart.length){
+toast("Votre panier est vide.");
+openPage("shop");
+return;
+}
+
+document.getElementById("customerName").value=profile.name||"";
+document.getElementById("customerPhone").value=profile.phone||"";
+
+document.getElementById("checkoutSummary").innerHTML=`
+<div class="notice">
+<strong>Récapitulatif</strong><br>
+${cart.map(p=>escapeHTML(p.name)+" × "+p.qty+" = "+money(p.price*p.qty)).join("<br>")}
+<hr style="margin:9px 0;border:0;border-top:1px solid #ddd">
+<strong>Total provisoire : ${money(subtotal())}</strong>
+</div>
+`;
+
+}
+
+document.getElementById("orderForm").addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+if(!cart.length){
+toast("Votre panier est vide.");
+return;
+}
+
+let photo=document.getElementById("orderPhoto").files[0];
+
+let customer={
+name:document.getElementById("customerName").value.trim(),
+phone:document.getElementById("customerPhone").value.trim(),
+area:document.getElementById("customerArea").value.trim(),
+address:document.getElementById("customerAddress").value.trim(),
+delivery:document.getElementById("deliveryMode").value,
+date:document.getElementById("desiredDate").value,
+payment:document.getElementById("paymentMode").value,
+instructions:document.getElementById("instructions").value.trim()
+};
+
+if(!customer.name||!customer.phone||!customer.area){
+toast("Veuillez remplir les informations obligatoires.");
+return;
+}
+
+if(customer.delivery!=="Dépôt au pressing"&&!customer.address){
+toast("Veuillez préciser votre adresse.");
+return;
+}
+
+let order={
+id:"ECL-"+Date.now().toString().slice(-8),
+date:new Date().toISOString(),
+customer,
+items:cart.map(p=>({...p})),
+total:subtotal(),
+status:STATUS[0],
+step:0,
+photoName:photo?photo.name:"",
+paid:false
+};
+
+orders.unshift(order);
+save("eclat_orders",orders);
+
+profile.name=customer.name;
+profile.phone=customer.phone;
+save("eclat_profile",profile);
+
+let message=
+"✨ *NOUVELLE COMMANDE — ÉCLAT D'AFRIQUE PRESSING*%0A%0A"+
+"*N° :* "+order.id+"%0A"+
+"*Client :* "+encodeURIComponent(customer.name)+"%0A"+
+"*Téléphone :* "+encodeURIComponent(customer.phone)+"%0A"+
+"*Quartier :* "+encodeURIComponent(customer.area)+"%0A"+
+"*Adresse :* "+encodeURIComponent(customer.address||"Dépôt au pressing")+"%0A"+
+"*Réception :* "+encodeURIComponent(customer.delivery)+"%0A"+
+"*Paiement :* "+encodeURIComponent(customer.payment)+"%0A%0A"+
+"*ARTICLES*%0A"+
+order.items.map(p=>
+"• "+encodeURIComponent(p.name)+" x "+p.qty+" = "+encodeURIComponent(money(p.price*p.qty))
+).join("%0A")+
+"%0A%0A*TOTAL : "+encodeURIComponent(money(order.total))+"*%0A"+
+"*Date souhaitée :* "+encodeURIComponent(customer.date||"À convenir")+"%0A"+
+"*Instructions :* "+encodeURIComponent(customer.instructions||"Aucune")+"%0A"+
+"*Photo sélectionnée :* "+encodeURIComponent(order.photoName||"Non");
+
+cart=[];
+save("eclat_cart",cart);
+updateHeader();
+
+confetti();
+toast("🎉 Commande enregistrée ! N° "+order.id);
+
+setTimeout(()=>window.open("https://wa.me/"+BUSINESS_PHONE+"?text="+message,"_blank"),1100);
+
+openPage("tracking");
+
+document.getElementById("trackNumber").value=order.id;
+trackOrder();
+
+});
+
+/* =================================
+   SUIVI
+================================= */
+
+function renderTimeline(step){
+
+return STATUS.map((s,i)=>`
+<div class="timeline-step ${i<step?"done":i===step?"current":""}" style="--i:${i}">
+<strong>${escapeHTML(s)}</strong>
+<small>${i<step?"Étape terminée":i===step?"Étape actuelle":"En attente"}</small>
+</div>
+`).join("");
+
+}
+
+function trackOrder(){
+
+let id=document.getElementById("trackNumber").value.trim().toUpperCase();
+
+let order=orders.find(o=>o.id.toUpperCase()===id);
+
+let result=document.getElementById("trackingResult");
+
+if(!order){
+result.innerHTML='<div class="card">Commande introuvable sur cet appareil. Vérifiez le numéro ou contactez le pressing.</div>';
+initReveal();
+return;
+}
+
+document.getElementById("generalTimeline").innerHTML=renderTimeline(order.step||0);
+
+result.innerHTML=`
+<div class="card">
+<h3>Commande ${escapeHTML(order.id)}</h3>
+<p style="font-size:12px;color:#777;margin:8px 0">${escapeHTML(order.customer.name)}</p>
+<span class="status">${escapeHTML(order.status)}</span>
+<div style="margin-top:15px">
+<strong>${money(order.total)}</strong>
+<p style="font-size:12px;color:#777;margin-top:7px">${order.items.length} référence(s) de produits</p>
+</div>
+<div class="timeline">${renderTimeline(order.step||0)}</div>
+<button class="full-btn" onclick="contactOrder('${order.id}')">Contacter le pressing</button>
+</div>
+`;
+
+initReveal();
+
+}
+
+/* =================================
+   PROFIL / HISTORIQUE
+================================= */
+
+function saveProfile(){
+
+profile={
+name:document.getElementById("profileName").value.trim(),
+phone:document.getElementById("profilePhone").value.trim()
+};
+
+save("eclat_profile",profile);
+toast("✓ Informations enregistrées");
+
+}
+
+function renderProfile(){
+
+document.getElementById("profileName").value=profile.name||"";
+document.getElementById("profilePhone").value=profile.phone||"";
+
+let history=document.getElementById("history");
+
+if(!orders.length){
+history.innerHTML='<div class="empty">Aucune commande pour le moment.</div>';
+return;
+}
+
+history.innerHTML=orders.map(o=>`
+<div class="admin-row">
+<h4>${escapeHTML(o.id)}</h4>
+<p>${new Date(o.date).toLocaleDateString("fr-FR")}<br>${money(o.total)}<br>${escapeHTML(o.status)}</p>
+<button class="edit-btn" onclick="repeatOrder('${o.id}')">Recommander</button>
+<button class="edit-btn" onclick="openTracking('${o.id}')">Voir le suivi</button>
+</div>
+`).join("");
+
+initReveal();
+
+}
+
+function repeatOrder(id){
+
+let order=orders.find(o=>o.id===id);
+if(!order)return;
+
+order.items.forEach(p=>{
+let item=cart.find(x=>x.id===p.id);
+if(item)item.qty+=p.qty;
+else cart.push({...p});
+});
+
+save("eclat_cart",cart);
+updateHeader();
+bumpCart();
+openPage("cart");
+
+}
+
+function openTracking(id){
+openPage("tracking");
+document.getElementById("trackNumber").value=id;
+trackOrder();
+}
+
+/* =================================
+   ADMINISTRATION
+================================= */
+
+function adminLogin(){
+
+let pin=prompt("Code administrateur :");
+
+if(pin===null)return;
+
+if(pin!==adminPin){
+toast("⚠ Code incorrect.");
+return;
+}
+
+openPage("admin");
+
+}
+
+function renderAdmin(){
+
+let revenue=orders.reduce((s,o)=>s+(o.step===8?o.total:0),0);
+
+countUp(document.getElementById("statOrders"),orders.length,String);
+countUp(document.getElementById("statRevenue"),revenue,v=>Number(v).toLocaleString("fr-FR")+" F");
+countUp(document.getElementById("statPending"),orders.filter(o=>o.step<8).length,String);
+countUp(document.getElementById("statCustomers"),new Set(orders.map(o=>o.customer.phone)).size,String);
+
+document.getElementById("deliveryFee").value=settings.deliveryFee;
+
+renderAdminOrders();
+renderAdminProducts();
+initReveal();
+
+}
+
+function renderAdminOrders(){
+
+let box=document.getElementById("adminOrders");
+
+if(!orders.length){
+box.innerHTML='<div class="empty">Aucune commande reçue.</div>';
+return;
+}
+
+box.innerHTML=orders.map(o=>`
+<div class="admin-row">
+<h4>${escapeHTML(o.id)}</h4>
+<p>
+<strong>${escapeHTML(o.customer.name)}</strong><br>
+Téléphone : ${escapeHTML(o.customer.phone)}<br>
+Quartier : ${escapeHTML(o.customer.area)}<br>
+Articles : ${o.items.map(p=>escapeHTML(p.name)+" × "+p.qty).join(", ")}<br>
+Total : <strong>${money(o.total)}</strong>
+</p>
+
+<select onchange="updateOrderStatus('${o.id}',this.value)">
+${STATUS.map((s,i)=>`
+<option value="${i}" ${o.step===i?"selected":""}>${escapeHTML(s)}</option>
+`).join("")}
+</select>
+
+<button class="edit-btn" onclick="contactOrder('${o.id}')">WhatsApp client</button>
+<button class="danger-btn" onclick="deleteOrder('${o.id}')">Supprimer</button>
+</div>
+`).join("");
+
+}
+
+function updateOrderStatus(id,step){
+
+let order=orders.find(o=>o.id===id);
+if(!order)return;
+
+order.step=Number(step);
+order.status=STATUS[step];
+
+save("eclat_orders",orders);
+renderAdmin();
+toast("✓ Statut : "+order.status);
+if(order.step===8)confetti();
+
+}
+
+function deleteOrder(id){
+
+if(!confirm("Supprimer cette commande ?"))return;
+
+orders=orders.filter(o=>o.id!==id);
+save("eclat_orders",orders);
+renderAdmin();
+
+}
+
+function contactOrder(id){
+
+let order=orders.find(o=>o.id===id);
+if(!order)return;
+
+let text=
+"Bonjour "+order.customer.name+
+", concernant votre commande "+order.id+
+" chez Éclat D'Afrique Pressing.";
+
+window.open("https://wa.me/237"+order.customer.phone.replace(/\D/g,"").replace(/^237/,"")+"?text="+encodeURIComponent(text),"_blank");
+
+}
+
+function renderAdminProducts(){
+
+document.getElementById("adminProducts").innerHTML=products.map(p=>`
+<div class="admin-row">
+<h4>${escapeHTML(p.emoji)} ${escapeHTML(p.name)}</h4>
+<p>${money(p.price)} — ${escapeHTML(p.unit)}<br>${escapeHTML(p.category)}</p>
+<button class="edit-btn" onclick="editProduct(${p.id})">Modifier</button>
+<button class="danger-btn" onclick="deleteProduct(${p.id})">Supprimer</button>
+</div>
+`).join("");
+
+}
+
+function saveProduct(){
+
+let name=document.getElementById("productName").value.trim();
+let price=Number(document.getElementById("productPrice").value);
+
+if(!name||price<0||!Number.isFinite(price)){
+toast("Veuillez remplir correctement les informations.");
+return;
+}
+
+let id=document.getElementById("editProductId").value;
+
+let p={
+id:id?Number(id):Date.now(),
+name,
+category:document.getElementById("productCategory").value,
+price,
+unit:document.getElementById("productUnit").value||"par pièce",
+emoji:document.getElementById("productEmoji").value||"🧺",
+description:document.getElementById("productDescription").value
+};
+
+if(id){
+products=products.map(x=>x.id===Number(id)?p:x);
+}else{
+products.push(p);
+}
+
+save("eclat_products",products);
+
+resetProductForm();
+renderAdmin();
+renderHome();
+
+toast("✓ Produit enregistré");
+
+}
+
+function editProduct(id){
+
+let p=products.find(x=>x.id===id);
+if(!p)return;
+
+document.getElementById("editProductId").value=p.id;
+document.getElementById("productName").value=p.name;
+document.getElementById("productCategory").value=p.category;
+document.getElementById("productPrice").value=p.price;
+document.getElementById("productUnit").value=p.unit;
+document.getElementById("productEmoji").value=p.emoji;
+document.getElementById("productDescription").value=p.description;
+
+window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+
+}
+
+function deleteProduct(id){
+
+if(!confirm("Supprimer ce produit ?"))return;
+
+products=products.filter(p=>p.id!==id);
+save("eclat_products",products);
+renderAdmin();
+renderHome();
+
+}
+
+function resetProductForm(){
+
+["editProductId","productName","productPrice","productUnit","productEmoji","productDescription"].forEach(id=>{
+document.getElementById(id).value="";
+});
+
+}
+
+function saveSettings(){
+
+settings.deliveryFee=Math.max(0,Number(document.getElementById("deliveryFee").value)||0);
+save("eclat_settings",settings);
+
+toast("✓ Paramètres enregistrés");
+
+}
+
+function changePin(){
+
+let old=prompt("Ancien code administrateur :");
+if(old!==adminPin){
+toast("⚠ Ancien code incorrect.");
+return;
+}
+
+let pin=prompt("Nouveau code :");
+
+if(!pin||pin.length<4){
+toast("Minimum 4 caractères.");
+return;
+}
+
+adminPin=pin;
+save("eclat_pin",adminPin);
+
+toast("✓ Code modifié");
+
+}
+
+function exportData(){
+
+let data={
+products,
+orders,
+settings,
+profile,
+date:new Date().toISOString()
+};
+
+let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+let url=URL.createObjectURL(blob);
+let a=document.createElement("a");
+
+a.href=url;
+a.download="eclat-afrique-sauvegarde.json";
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
+
+/* =================================
+   CONTACT
+================================= */
+
+function callBusiness(){
+
+window.location.href="tel:+237"+BUSINESS_DISPLAY.replace(/\s/g,"");
+
+}
+
+function contactWhatsApp(){
+
+window.open("https://wa.me/"+BUSINESS_PHONE+"?text="+encodeURIComponent("Bonjour Éclat D'Afrique Pressing. Je souhaite avoir des informations sur vos services."),"_blank");
+
+}
+
+/* =================================
+   INITIALISATION
+================================= */
+
+function renderInitialTimeline(){
+
+document.getElementById("generalTimeline").innerHTML=renderTimeline(-1);
+
+}
+
+function initialize(){
+
+renderProducts();
+renderHome();
+renderCart();
+renderProfile();
+renderInitialTimeline();
+updateHeader();
+initReveal();
+setTimeout(moveIndicator,100);
+
+}
+
+initialize();
+addEventListener("load",moveIndicator);
+
+</script></body>
+</html>
